@@ -1,19 +1,9 @@
-# SL-Translate-CN
+# 已迁移至 LabAPI--command
 
-LabAPI 中文聊天插件，为 SCP: Secret Laboratory 的玩家客户端控制台添加三个命令，并在消息中显示发送者阵营、存活状态和角色：
+聊天插件源码、解决方案、修复和回归检查已迁移至：
 
-- `.bc <内容>`：公屏说话，默认广播/提示显示 10 秒。
-- `.c <内容>`：阵营频道，只发送给同阵营玩家。
-- `.ac <内容>`：举报频道，私信给在线 Remote Admin 管理，并写入服务器日志。
+https://github.com/shadow096-1/LabAPI--command
 
-## 构建
+本仓库主分支中的旧源码已移除，仅保留迁移说明。原有 Exiled 自动回血代码保存在新仓库的 `legacy/ScpAutoHeal.cs`，不参与 LabAPI 聊天插件编译。
 
-```bash
-dotnet build SL-Translate-CN.sln -c Release
-```
-
-构建后将 `SLTranslateCN.dll` 放入服务器的 `LabAPI/plugins/<端口>` 或 `LabAPI/plugins/global` 目录。
-
-## 配置
-
-插件会读取 `sl_translate_cn.yml`，可配置是否启用、各频道显示时长，以及是否向客户端控制台发送纯文本副本。
+迁移前版本可在历史提交 `3d711586584d7bfd11a5cc4b7afc54c28d4dc48a` 查看；既有分支、标签及历史记录未删除。后续开发请使用新仓库。
